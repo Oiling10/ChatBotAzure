@@ -1,0 +1,16 @@
+{
+  "responses": [
+    {
+      "intent": "Instalar",
+      "NormalFeelingResponse": "Para instalar la aplicación debe dirigirse a la url <http://resources.seygob.com/Setup/HASNET.msi>"
+    },
+    {
+      "intent": "None",
+      "NormalFeelingResponse": "No entiendo tu pregunta"
+    },
+    {
+      "intent": "Crear",
+      "NormalFeelingResponse": "General-modulo general-configuracion tercero-tercero"
+    }
+  ]
+}

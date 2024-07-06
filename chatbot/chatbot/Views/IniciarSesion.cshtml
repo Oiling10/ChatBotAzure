@@ -1,0 +1,37 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
+
+namespace chatbot.Views
+{
+    public class IniciarSesionModel : PageModel
+    {
+        [BindProperty]
+        [Required]
+        public string UsuarioNombre { get; set; }
+
+        [BindProperty]
+        [Required]
+        [EmailAddress]
+        public string UsuarioEmail { get; set; }
+
+        public void OnGet()
+        {
+        }
+
+        public async Task<IActionResult>
+    OnPostAsync()
+    {
+    if (!ModelState.IsValid)
+    {
+    return Page(); // Re-renders the page with validation messages
+    }
+
+    // Lógica para manejar la solicitud POST (por ejemplo, guardar el usuario, etc.)
+    // Aquí puedes integrar la llamada al backend o la lógica que consideres.
+
+    // Simulación de registro exitoso
+    return RedirectToPage("/Chat"); // Redirigir a la página de chat
+    }
+    }
+    }
